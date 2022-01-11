@@ -25,4 +25,7 @@ public class Client {
 
     @Column(name = "ADDRESS")
     private String address;
+
+    @Column(name = "EMAIL")
+    private String email;
 }
