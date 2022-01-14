@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5434/clients
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  jpa:
+    hibernate:
+      platform: POSTGRES
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+  level:
+    br.com.southsystem: 'INFO'
