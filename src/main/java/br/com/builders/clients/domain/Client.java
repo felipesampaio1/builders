@@ -3,6 +3,7 @@ package br.com.builders.clients.domain;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -28,4 +29,7 @@ public class Client {
 
     @Column(name = "EMAIL")
     private String email;
+
+    @Column(name = "BIRTHDATE")
+    private LocalDate birthDate;
 }
