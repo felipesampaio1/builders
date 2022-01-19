@@ -1,6 +1,13 @@
 version: '3'
 
 services:
+  clients:
+    image: 395454834028.dkr.ecr.us-east-1.amazonaws.com/builders:latest
+    ports:
+      - 8080:8080
+    container_name: clients-back
+    networks:
+      - postgres-compose-network
   postgres:
     image: postgres:11
     environment:
