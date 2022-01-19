@@ -11,10 +11,6 @@ O desafio foi realizado atendendo aos requisitos solicitados na documentação.
      cd clients
      docker-compose -f docker-compose.yml up
 
-### Build e execução do sistema
-    ./mvnw clean install -DskipTests
-    ./mvnw spring-boot:run
-
 ### Executar testes
     ./mvnw test
 
