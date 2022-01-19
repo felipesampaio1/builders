@@ -10,7 +10,7 @@ env:
   ECR_REPOSITORY: builders
   ECS_SERVICE: tomcat-webserver-service
   ECS_CLUSTER: clusterBuilders
-  ECS_TASK_DEFINITION: .github/workflows/taskdefinition                                            
+  ECS_TASK_DEFINITION: .                                            
   CONTAINER_NAME: tomcat-webserver
                                              
 
