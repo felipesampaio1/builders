@@ -2,15 +2,21 @@ version: '3'
 
 services:
   clients:
+    restart: always
     image: 395454834028.dkr.ecr.us-east-1.amazonaws.com/builders:latest
     ports:
       - 8080:8080
     container_name: clients-back
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
     depends_on:
+      - postgres
+    links:
       - postgres
     networks:
       - clientsnetwork
   postgres:
+    restart: always
     image: postgres:11
     environment:
       POSTGRES_USER: postgres
@@ -22,6 +28,5 @@ services:
       - ./postgres/data:/var/lib/postgresql/data
     networks:
       - clientsnetwork
-
 networks:
-    clientsnetwork:
+  clientsnetwork:
